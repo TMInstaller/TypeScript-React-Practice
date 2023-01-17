@@ -21,10 +21,11 @@ export default function App() {
       <VariousInputs />
       <StopPropagation />
       <EventBubbling />
-      <DispatchEvent />
+      {/* 110p 앱 파일 수정 */}
+      {/* <DispatchEvent />
       <ReactOnClick />
       <OnClick />
-      <EventListener />
+      <EventListener /> */}
     </div>
   )
 }
