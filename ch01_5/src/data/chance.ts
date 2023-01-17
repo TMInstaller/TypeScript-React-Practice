@@ -1,4 +1,4 @@
-// p46 chance.ts 파일 작성하기
+// 46p chance.ts 파일 작성하기
 import Chance from 'chance'
 const chance = new Chance()
 
