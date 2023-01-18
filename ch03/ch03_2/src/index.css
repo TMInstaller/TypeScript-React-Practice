@@ -1,13 +1,3 @@
-/* 154p 테일윈드 CSS 테스트하기 */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.material-icons {
-  font-family: 'Material Icons';
-  display: inline-block;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
