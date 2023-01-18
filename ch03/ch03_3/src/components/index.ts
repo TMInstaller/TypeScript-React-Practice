@@ -4,3 +4,5 @@ export * from './Icon'
 export * from './Texts'
 // 171p Div 컴포넌트 반영하기
 export * from './Div'
+// 190p Avatar 컴포넌트 반영하기
+export * from './Avatar'
