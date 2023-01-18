@@ -1,5 +1,7 @@
-/* 137p 구글 머터리얼 아이콘 설정하기 */
-/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
+/* 154p 테일윈드 CSS 테스트하기 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .material-icons {
   font-family: 'Material Icons';
