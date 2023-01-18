@@ -1,11 +1,15 @@
-// 167p Title 컴포넌트를 사용하는 기본 파일 만들기
-import { Title } from '../components'
+// 184p background-image 스타일 속성 테스트
+import { Div, Title, Subtitle } from '../components'
+import * as D from '../data'
 
-export default function CopyMe() {
+const src = D.randomImage(1200, 400)
+export default function BackgroundImageTest() {
   return (
     <section className="mt-4">
-      <Title>CopyMe</Title>
-      <div className="mt-4"></div>
+      <Title>BackgroundImageTest</Title>
+      <Div className="mt-4 bg-gray-300  h-80" src={src}>
+        <Subtitle className="text-gray-500 ">Some Text here</Subtitle>
+      </Div>
     </section>
   )
 }
