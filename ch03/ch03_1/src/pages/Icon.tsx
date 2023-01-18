@@ -1,4 +1,10 @@
-// 99p 복사용 기본 코드 작성
-export default function CopyMe() {
-  return <div>CopyMe</div>
+// 137p 구글 머터리얼 아이콘 설정하기
+export default function Icon() {
+  return (
+    <div>
+      <h3>Icon</h3>
+      <span className="material-icons">home</span>
+      <span className="material-icons">check_circle_outline</span>
+    </div>
+  )
 }
