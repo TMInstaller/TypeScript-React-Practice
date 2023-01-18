@@ -6,3 +6,5 @@ export * from './Texts'
 export * from './Div'
 // 190p Avatar 컴포넌트 반영하기
 export * from './Avatar'
+// 201p Overlay 컴포넌트 반영하기
+export * from './Overlay'
