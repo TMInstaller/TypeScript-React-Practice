@@ -2,3 +2,5 @@
 export * from './Icon'
 // 164p Do it!
 export * from './Texts'
+// 171p Div 컴포넌트 반영하기
+export * from './Div'
