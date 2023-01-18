@@ -1,11 +1,13 @@
-// 167p Title 컴포넌트를 사용하는 기본 파일 만들기
+// 182p margin style 속성 테스트
 import { Title } from '../components'
+import * as D from '../data'
 
-export default function CopyMe() {
+const src = D.randomImage(300, 600)
+export default function ImageTest() {
   return (
     <section className="mt-4">
-      <Title>CopyMe</Title>
-      <div className="mt-4"></div>
+      <Title>ImageTest</Title>
+      <img src={src} className="bg-gray-300 w-[400px] h-[400px] " alt="" />
     </section>
   )
 }
