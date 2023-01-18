@@ -1,4 +1,15 @@
-// 99p 복사용 기본 코드 작성
-export default function CopyMe() {
-  return <div>CopyMe</div>
+// 141p 아이콘 사용하기
+import { Icon } from '../components'
+
+export default function UsingIcon() {
+  return (
+    <div>
+      <h3>UsingIcon</h3>
+      <Icon name="home" style={{ color: 'blue' }} />
+      <Icon
+        name="check_circle_outline"
+        style={{ fontSize: '50px', color: 'red' }}
+      />
+    </div>
+  )
 }
