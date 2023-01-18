@@ -23,8 +23,8 @@ export const Title: FC<TitleProps> = ({
   return <p {...props} className={className} />
 }
 
-export type SubTitleProps = TitleProps & {}
-export const SubTitle: FC<SubTitleProps> = ({
+export type SubtitleProps = TitleProps & {}
+export const Subtitle: FC<SubtitleProps> = ({
   className: _className,
   numberOfLines,
   ...props
@@ -37,7 +37,7 @@ export const SubTitle: FC<SubTitleProps> = ({
   return <p {...props} className={className} />
 }
 
-export type SummaryProps = SubTitleProps & {}
+export type SummaryProps = SubtitleProps & {}
 export const Summary: FC<SummaryProps> = ({
   className: _className,
   numberOfLines,
