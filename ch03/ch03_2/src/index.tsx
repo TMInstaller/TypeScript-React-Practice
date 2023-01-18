@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from '../../../ch03/ch03_1/src/App'
+import App from '../../../ch03/ch03_2/src/App'
 import reportWebVitals from './reportWebVitals'
 import '@fontsource/material-icons'
 
