@@ -1,4 +1,11 @@
-// 99p 복사용 기본 코드 작성
+// 167p Title 컴포넌트를 사용하는 기본 파일 만들기
+import { Title } from '../components'
+
 export default function CopyMe() {
-  return <div>CopyMe</div>
+  return (
+    <section className="mt-4">
+      <Title>CopyMe</Title>
+      <div className="mt-4"></div>
+    </section>
+  )
 }
