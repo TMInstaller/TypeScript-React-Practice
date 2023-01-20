@@ -17,12 +17,12 @@ export default function AlignTest() {
       <div className={`flex flex-row ${justify} p-2 bg-gray-300`}>{boxes}</div>
     </div>
   ))
-  const items = ['items-start', 'items-center', 'items-end'].map((item) => {
-    ;<div key={item} className="p-2 ml-4">
+  const items = ['items-start', 'items-center', 'items-end'].map((item) => (
+    <div key={item} className="p-2 ml-4">
       <Subtitle>flex flex-row {item}</Subtitle>
       <div className={`flex flex-row ${item} h-20 bg-gray-300`}>{boxes}</div>
     </div>
-  })
+  ))
   return (
     <section className="p-4 mt-4">
       <Title>AlignTest</Title>
