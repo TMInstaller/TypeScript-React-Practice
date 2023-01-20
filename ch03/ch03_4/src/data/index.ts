@@ -3,3 +3,5 @@ export * from './util'
 export * from './image'
 export * from './chance'
 export * from './date'
+// 220p 사용자 데이터 반영하기
+export * from './User'
