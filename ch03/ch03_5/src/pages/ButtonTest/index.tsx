@@ -1,9 +1,17 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 234p 버튼 테스트 인덱스 구현하기
+import Basic from './Basic'
+import Size from './Size'
+import IconTest from './IconTest'
+
+export default function ButtonTest() {
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <h2 className="text-5xl font-bold text-center ">ButtonTest</h2>
+      <div className="mt-4">
+        <IconTest />
+        <Size />
+        <Basic />
+      </div>
     </section>
   )
 }
