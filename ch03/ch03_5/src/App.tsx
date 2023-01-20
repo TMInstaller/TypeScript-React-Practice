@@ -1,22 +1,15 @@
-// 204p 기본 앱 파일
-import AlignTest from './pages/AlignTest'
-import CardContainer from './pages/CardContainer'
-import DirectionTest from './pages/DirectionTest'
-import JustifyCenterTest from './pages/JustifyCenterTest'
-import MinMaxTest from './pages/MinMaxTest'
-import UserContainer from './pages/UserContainer'
-import WrapTest from './pages/WrapTest'
+// 231p 기본 앱 파일
+
+import ButtonTest from './pages/ButtonTest'
+import InputTest from './pages/InputTest'
+import ModalTest from './pages/ModalTest'
 
 export default function App() {
   return (
     <main>
-      <CardContainer />
-      <UserContainer />
-      <AlignTest />
-      <JustifyCenterTest />
-      <MinMaxTest />
-      <WrapTest />
-      <DirectionTest />
+      <ButtonTest />
+      <InputTest />
+      <ModalTest />
     </main>
   )
 }
