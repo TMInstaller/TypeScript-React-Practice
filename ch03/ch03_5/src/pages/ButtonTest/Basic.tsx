@@ -1,3 +1,5 @@
+import { Button } from '../../theme/daisyui'
+
 // 234p 버튼 테스트 코드 구현하기
 export default function Basic() {
   return (
@@ -5,9 +7,8 @@ export default function Basic() {
       <h2 className="text-3xl font-bold text-center ">Basic</h2>
       <div className="flex mt-4 justify-evenly">
         <button className="btn btn-primary">daisyui button</button>
-        <button className="btn btn-primary">Button</button>
+        <Button className="btn btn-primary">Button</Button>
       </div>
-      <div className="mt-4"></div>
     </section>
   )
 }
