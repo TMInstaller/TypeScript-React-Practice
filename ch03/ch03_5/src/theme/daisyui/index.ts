@@ -4,3 +4,5 @@ export * from './Button'
 export * from './Icon'
 // 240p Input 컴포넌트 반영하기
 export * from './Input'
+// 249p 모달 컴포넌트 반영하기
+export * from './Modal'
