@@ -1,9 +1,19 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 253p Clock 컴포넌트
+import type { FC } from 'react'
+import { Div, Title, Subtitle } from '../components'
+
+export type ClockProps = {
+  today: Date
+}
+
+const Clock: FC<ClockProps> = ({ today }) => {
   return (
-    <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
-    </section>
+    <Div className="flex flex-col items-center justify-center h-screen text-white bg-primary">
+      <Title className="text-5xl">{today.toLocaleTimeString()}</Title>
+      <Subtitle className="mt-4 text-2xl ">
+        {today.toLocaleDateString()}
+      </Subtitle>
+    </Div>
   )
 }
+export default Clock
