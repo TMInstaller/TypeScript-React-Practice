@@ -1,5 +1,4 @@
-// 269p 기본 앱 파일 작성하기
-
+// 284p 기본 앱 파일 작성하기
 import ArrayState from './pages/ArrayState'
 import BasicForm from './pages/BasicForm'
 import HighOrderRadioInputTest from './pages/HighOrderRadioInputTest'
