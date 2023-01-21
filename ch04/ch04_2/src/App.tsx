@@ -1,8 +1,16 @@
-// 266p useClock 커스텀 훅으로 만든 시계
-import { useClock } from './hooks'
-import Clock from './pages/Clock'
+// 269p 기본 앱 파일 작성하기
+import Callback from './pages/Callback'
+import HighOrderCallback from './pages/HighOrderCallback'
+import Memo from './pages/Memo'
+import UseOrCreateTest from './pages/UseOrCreateTest'
 
 export default function App() {
-  const today = useClock()
-  return <Clock today={today} />
+  return (
+    <div>
+      <HighOrderCallback />
+      <Callback />
+      <Memo />
+      <UseOrCreateTest />
+    </div>
+  )
 }
