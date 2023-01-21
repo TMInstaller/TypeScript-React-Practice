@@ -1,9 +1,33 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 249p 모달 컴포넌트 사용하기
+import { Title, Subtitle } from '../../components'
+import { Modal, ModalContent, ModalAction, Button } from '../../theme/daisyui'
+import * as D from '../../data'
+
+export default function ModalTest() {
+  const open = true
+  const closeClicked = () => alert('closeClicked')
+  const acceptClicked = () => alert('acceptClicked')
+
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <Title>ModalTest</Title>
+      <Modal open={open}>
+        <ModalContent onCloseIconClicked={closeClicked}>
+          <Subtitle>Modal</Subtitle>
+          <p className="mt-4 text-justify">{D.randomParagraphs()}</p>
+          <ModalAction>
+            <Button
+              className="w-24 normal-case bg-primary btn-sm"
+              onClick={acceptClicked}
+            >
+              Accept
+            </Button>
+            <Button className="w-24 normal-case  btn-sm" onClick={closeClicked}>
+              Close
+            </Button>
+          </ModalAction>
+        </ModalContent>
+      </Modal>
     </section>
   )
 }
