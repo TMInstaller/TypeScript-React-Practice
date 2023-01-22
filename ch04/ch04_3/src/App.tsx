@@ -1,7 +1,7 @@
 // 284p 기본 앱 파일 작성하기
 import ArrayState from './pages/ArrayState'
 import BasicForm from './pages/BasicForm'
-import HighOrderRadioInputTest from './pages/HighOrderRadioInputTest'
+import HigherOrderRadioInputTest from './pages/HigherOrderRadioInputTest'
 import InputTest from './pages/InputTest'
 import NumberState from './pages/NumberState'
 import ObjectState from './pages/ObjectState'
@@ -14,7 +14,7 @@ export default function App() {
       <ArrayState />
       <ObjectState />
       <BasicForm />
-      <HighOrderRadioInputTest />
+      <HigherOrderRadioInputTest />
       <RadioInputTest />
       <ShowHideModal />
       <InputTest />
