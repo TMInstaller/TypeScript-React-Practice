@@ -1,24 +1,14 @@
-// 284p 기본 앱 파일 작성하기
-import ArrayState from './pages/ArrayState'
-import BasicForm from './pages/BasicForm'
-import HigherOrderRadioInputTest from './pages/HigherOrderRadioInputTest'
-import InputTest from './pages/InputTest'
-import NumberState from './pages/NumberState'
-import ObjectState from './pages/ObjectState'
-import RadioInputTest from './pages/RadioInputTest'
-import ShowHideModal from './pages/ShowHideModal'
+// 315p 기본 앱 파일 작성하기
+import ClassLifecycle from './pages/ClassLifecycle'
+import FetchTest from './pages/FetchTest'
+import WindowResizeTest from './pages/WindowResizeTest'
 
 export default function App() {
   return (
     <main>
-      <ArrayState />
-      <ObjectState />
-      <BasicForm />
-      <HigherOrderRadioInputTest />
-      <RadioInputTest />
-      <ShowHideModal />
-      <InputTest />
-      <NumberState />
+      <FetchTest />
+      <WindowResizeTest />
+      <ClassLifecycle />
     </main>
   )
 }
