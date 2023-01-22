@@ -1,9 +1,18 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
-  return (
-    <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
-    </section>
-  )
+// 316p 클래스 컴포넌트에서 상태 구현하기(초기 모습)
+import { Component } from 'react'
+import { Title } from '../components'
+
+export default class ClassLifecycle extends Component {
+  render() {
+    const today = new Date()
+    return (
+      <section className="mt-4">
+        <Title>ClassLifecycle</Title>
+        <div className="flex flex-col items-center mt-4">
+          <p className="font-mono text-3xl">{today.toLocaleDateString()}</p>
+          <p className="font-mono text-3xl">{today.toLocaleTimeString()}</p>
+        </div>
+      </section>
+    )
+  }
 }
