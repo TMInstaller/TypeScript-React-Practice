@@ -1,17 +1,17 @@
-// 240p Input컴포넌트 구현하기
-import type { FC, DetailedHTMLProps, InputHTMLAttributes } from 'react'
+// 240p Input 컴포넌트 구현하기
+// 354p Input 컴포넌트 수정하기
+import type { DetailedHTMLProps, InputHTMLAttributes } from 'react'
+import { forwardRef } from 'react'
 
 export type ReactInputProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >
 
-export type inputProps = ReactInputProps & {}
+export type InputProps = ReactInputProps & {}
 
-export const Input: FC<inputProps> = ({
-  className: _className,
-  ...inputProps
-}) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const { className: _className, ...inputProps } = props
   const className = ['input', _className].join(' ')
-  return <input {...inputProps} className={className} />
-}
+  return <input ref={ref} {...inputProps} className={className} />
+})
