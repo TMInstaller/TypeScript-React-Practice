@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 export const useEventListener = (
   target: EventTarget | null,
   type: string,
-  callback: EventListenerObject | null
+  callback: EventListenerOrEventListenerObject | null
 ) => {
   useEffect(() => {
     if (target && callback) {

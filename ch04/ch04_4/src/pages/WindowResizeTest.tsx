@@ -1,9 +1,16 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 325p 창 크기를 실시간으로 표시하기
+import { Title, Subtitle } from '../components'
+import { useWindowResize } from '../hooks'
+
+export default function WindowResizeTest() {
+  const [width, height] = useWindowResize()
+
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <Title>WindowResizeTest</Title>
+      <Subtitle className="mt-4">
+        width: {width}, height: {height}
+      </Subtitle>
     </section>
   )
 }
