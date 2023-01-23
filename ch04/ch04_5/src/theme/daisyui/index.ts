@@ -6,3 +6,5 @@ export * from './Icon'
 export * from './Input'
 // 249p 모달 컴포넌트 반영하기
 export * from './Modal'
+// 360p 인덱스 파일에 추가하기
+export * from './ValidatableInput'
