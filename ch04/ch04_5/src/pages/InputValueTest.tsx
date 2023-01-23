@@ -1,9 +1,31 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 349p 입력 상자에 입력한 값을 창에 띄우기
+import { useRef, useCallback, useEffect } from 'react'
+import { Title } from '../components'
+
+export default function InputFocusTest() {
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  const getValue = useCallback(
+    () => alert(`input value: ${inputRef.current?.value}`),
+    []
+  )
+
+  useEffect(() => inputRef.current?.focus(), [])
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <Title>InputValueTest</Title>
+      <div className="flex justify-center mt-4 ">
+        <div className="flex flex-col w-1/3 p-2 ">
+          <input
+            ref={inputRef}
+            className="input input-primary"
+            placeholder="enter some text"
+          />
+          <button onClick={getValue} className="mt-4 btn btn-primary">
+            get value
+          </button>
+        </div>
+      </div>
     </section>
   )
 }
