@@ -1,23 +1,14 @@
 // 374p 기본 앱 파일 작성하기
 // 378p 리덕스로 시계 구현하기(초기 모습)
-import type { Action } from 'redux'
+// 380p 리덕스로 시계 구현하기(완성)
 import { Provider as ReduxProvider } from 'react-redux'
-import { configureStore } from '@reduxjs/toolkit'
+import { useStore } from './store'
 
 import ReduxClock from './pages/ReduxClock'
 import UseReducerClock from './pages/UseReducerClock'
 
-type AppState = {
-  today: Date
-}
-
-const initialAppState = {
-  today: new Date(),
-}
-const rootReducer = (state: AppState = initialAppState, action: Action) => state
-const store = configureStore({ reducer: rootReducer, middleware: [] })
-
 export default function App() {
+  const store = useStore()
   return (
     <ReduxProvider store={store}>
       <main className="p-8 ">
