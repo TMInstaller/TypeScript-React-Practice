@@ -1,0 +1,9 @@
+/* 155p 테일윈드CSS 기능 반영하기 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-icons {
+  font-family: 'Material Icons';
+  display: inline-block;
+}
