@@ -1,9 +1,15 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 371p 창 크기 탐지해서 중단점 표시하기
+import { Title, Subtitle } from '../components'
+import { useReponsive } from '../contexts'
+
+export default function ResponsiveContextTest() {
+  const breakpoint = useReponsive()
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <Title>ResponsiveContextTest</Title>
+      <div className="mt-4">
+        <Subtitle>breakpoint: {breakpoint}</Subtitle>
+      </div>
     </section>
   )
 }
