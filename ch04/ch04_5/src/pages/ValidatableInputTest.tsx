@@ -14,4 +14,22 @@ export default function ValidatableInputTest() {
       else alert(valueOrErrorMessage)
     }
   }, [])
+
+  return (
+    <section className="mt-4">
+      <Title>ValidatableInpuTest</Title>
+      <div className="flex justify-center mt-4 ">
+        <div className="flex flex-col w-1/3 p-2 ">
+          <ValidatableInput
+            type="email"
+            ref={methodsRef}
+            className="input-primary"
+          />
+          <button onClick={validateEmail} className="mt-4 btn bg-primary">
+            validate
+          </button>
+        </div>
+      </div>
+    </section>
+  )
 }
