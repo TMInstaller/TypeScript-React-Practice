@@ -1,5 +1,9 @@
-// 392p 타입 파일 작성하기
+// 398p clock 타입 선언하기
 import type { Action } from 'redux'
 
-export type State = any
-export type Actions = Action
+export type State = Date
+export type SetClockAction = Action<'@clock/setClock'> & {
+  payload: State
+}
+
+export type Actions = SetClockAction
