@@ -1,5 +1,8 @@
-// 392p 타입 파일 작성하기
+// 402p number 타입 선언하기
 import type { Action } from 'redux'
 
-export type State = any
-export type Actions = Action
+export type State = number
+export type SetCounterAction = Action<'@counter/setCounter'> & {
+  payload: State
+}
+export type Actions = SetCounterAction
