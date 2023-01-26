@@ -1,5 +1,15 @@
-// 392p 타입 파일 작성하기
+// 415p 타입 선언하기
 import type { Action } from 'redux'
+import * as D from '../../data'
 
+export type Card = D.ICard
 export type State = any
-export type Actions = Action
+
+export type AddCardAction = Action<'@cards/addCard'> & {
+  payload: Card
+}
+export type RemoveCardAction = Action<'@cards/removeCard'> & {
+  payload: string
+}
+
+export type Actions = AddCardAction | RemoveCardAction
