@@ -33,7 +33,7 @@ export default function RemoteUserTest() {
     [dispatch]
   )
   const changePicture = useCallback(
-    () => dispatch(R.changePicture({ large: D.randomAvatar })),
+    () => dispatch(R.changePicture({ large: D.randomAvatar() })),
     [dispatch]
   )
 
@@ -70,10 +70,10 @@ export default function RemoteUserTest() {
       <div className="flex justify-center p-4 m-4 ">
         <Avatar src={user.picture.large} />
         <div className="ml-4 ">
-          <p className="text-xl  text-bold">
+          <p className="text-xl text-bold">
             {user.name.title}. {user.name.first} {user.name.last}
           </p>
-          <p className="italic  to-gray-600">{user.email}</p>
+          <p className="italic to-gray-600">{user.email}</p>
         </div>
       </div>
     </section>
