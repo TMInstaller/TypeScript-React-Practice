@@ -1,2 +1,11 @@
-// 392p 액션 파일 작성하기
+// 416p 액션 생성기 작성하기
 import type * as T from './types'
+
+export const addCard = (payload: T.Card): T.AddCardAction => ({
+  type: '@cards/addCard',
+  payload,
+})
+export const removeCard = (payload: string): T.RemoveCardAction => ({
+  type: '@cards/removeCard',
+  payload,
+})
