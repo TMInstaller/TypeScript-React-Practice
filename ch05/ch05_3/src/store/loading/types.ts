@@ -1,5 +1,10 @@
-// 392p 타입 파일 작성하기
+// 428p 로딩 타입 선언하기
 import type { Action } from 'redux'
 
-export type State = any
-export type Actions = Action
+export type State = boolean
+
+export type SetLoadingAction = Action<'@loading/setLoadingAction'> & {
+  payload: State
+}
+
+export type Actions = SetLoadingAction
