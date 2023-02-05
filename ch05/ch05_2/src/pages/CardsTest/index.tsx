@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Icon } from '../../theme/daisyui'
 import * as D from '../../data'
 import type { AppState } from '../../store'
-import * as C from '../../store'
+import * as C from '../../store/cards'
 import { Title } from '../../components'
 import Card from './Card'
 
@@ -19,7 +19,7 @@ export default function CardsTest() {
     dispatch(C.addCard(makeCard()))
   }, [dispatch])
   const removeCard = useCallback(
-    (id: string) => dispatch(C.removeCard(id)),
+    (id: string) => () => dispatch(C.removeCard(id)),
     [dispatch]
   )
   const children = useMemo(

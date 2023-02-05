@@ -3,7 +3,7 @@ import type { Action } from 'redux'
 import * as D from '../../data'
 
 export type Card = D.ICard
-export type State = any
+export type State = Card[]
 
 export type AddCardAction = Action<'@cards/addCard'> & {
   payload: Card

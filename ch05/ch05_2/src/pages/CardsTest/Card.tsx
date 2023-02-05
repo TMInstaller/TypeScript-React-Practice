@@ -1,9 +1,9 @@
+// 413p 사용자 카드 작성하기
 import { FC } from 'react'
 import { ICard } from '../../data'
 import { Div, Avatar } from '../../components'
 import { Icon } from '../../theme/daisyui'
 
-// 413p 사용자 카드 작성하기
 export type UserCardProps = {
   card: ICard
   onRemove?: () => void
