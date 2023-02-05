@@ -2,3 +2,5 @@
 export * from './types'
 export * from './actions'
 export * from './reducers'
+// 431p 인덱스에 추가하기
+export * from './doTimedLoading'
