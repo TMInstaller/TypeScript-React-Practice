@@ -2,7 +2,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { rootReducer } from './rootReducer'
-import logger from './logger'
+// 426p redux-logger 패키지로 수정하기
+import logger from 'redux-logger'
 
 const useLogger = process.env.NODE_ENV !== 'production'
 
