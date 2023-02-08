@@ -7,9 +7,12 @@ export type State = UUID[]
 export type SetListidOrders = Action<'@listidOrders/set'> & {
   payload: State
 }
-export type AddListidOrders = Action<'@listidOrders/add'> & { payload: UUID }
+export type AddListidToOrders = Action<'@listidOrders/add'> & { payload: UUID }
 export type RemoveListidFromOrders = Action<'@listOrders/remove'> & {
   payload: UUID
 }
 
-export type Actions = SetListidOrders | AddListidOrders | RemoveListidFromOrders
+export type Actions =
+  | SetListidOrders
+  | AddListidToOrders
+  | RemoveListidFromOrders
