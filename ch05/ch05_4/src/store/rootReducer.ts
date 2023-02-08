@@ -1,4 +1,13 @@
-// 390p 루트 리듀서 파일 작성하기
-import type { Action } from 'redux'
-import type { AppState } from './AppState'
-export const rootReducer = (state: AppState, action: Action) => state
+// 446p 루트 리듀서 작성하기
+import { combineReducers } from 'redux'
+import * as L from './listEntities'
+import * as LO from './listOrders'
+import * as LC from './listidCardidOrders'
+import * as C from './cardEntities'
+
+export const rootReducer = combineReducers({
+  listEntities: L.reducer,
+  listOrders: LO.reducer,
+  listidCardidOrders: LC.reducer,
+  cardEntities: C.reducer,
+})
