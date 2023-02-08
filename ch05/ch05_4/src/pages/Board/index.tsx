@@ -1,9 +1,18 @@
-// 230p 상대 경로 문제 해결하기
-export default function CopyMe() {
+// 448p 목록 생성기를 화면에 보이기
+import { useCallback } from 'react'
+import { Title } from '../../components'
+import CreateListForm from './CreateListForm'
+
+export default function Board() {
+  const onCreateList = useCallback((uuid: string, title: string) => {
+    console.log('onCreate', uuid, title)
+  }, [])
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center ">CopyMe</h2>
-      <div className="mt-4"></div>
+      <Title>Board</Title>
+      <div className="mt-4">
+        <CreateListForm onCreateList={onCreateList} />
+      </div>
     </section>
   )
 }
