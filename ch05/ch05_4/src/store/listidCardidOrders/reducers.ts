@@ -31,7 +31,7 @@ export const reducer = (state: T.State = initialState, action: T.Actions) => {
       return {
         ...state,
         [action.payload.listid]: cardids.filter(
-          (id) => id != action.payload.cardid
+          (id) => id !== action.payload.cardid
         ),
       }
     }
