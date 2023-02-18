@@ -10,3 +10,5 @@ export * from './Avatar'
 export * from './Overlay'
 // 478p 인덱스에 추가하기
 export * from './ListDraggable'
+// 485p 인덱스에 추가하기
+export * from './ListDroppable'
