@@ -1,12 +1,14 @@
 // 458p 보드에 목록 표시하기(초기 모습)
 // 473p BoardList 컴포넌트 수정하기(카드 기능 추가)
 // 479p BoardList 컴포넌트에 ListDraggable 반영하기
+// 493p CardDroppable 컴포넌트 적용하기
 import type { FC } from 'react'
 import type { List } from '../../store/commonTypes'
 import type { MoveFunc } from '../../components'
 
 import { useMemo } from 'react'
 import { Div } from '../../components'
+import { CardDroppable } from '../../components'
 import { Icon } from '../../theme/daisyui'
 import { ListDraggable } from '../../components'
 import ListCard from '../ListCard'
@@ -36,6 +38,8 @@ const BoardList: FC<BoardListProps> = ({
           key={card.uuid}
           card={card}
           onRemove={onRemoveCard(card.uuid)}
+          draggableId={card.uuid}
+          index={index}
         />
       )),
     [cards, onRemoveCard]
@@ -43,9 +47,13 @@ const BoardList: FC<BoardListProps> = ({
 
   return (
     <ListDraggable id={list.uuid} index={index} onMove={onMoveList}>
-      <Div {...props} className="p-2 m-2 border border-gray-300 rounded-lg">
+      <Div
+        {...props}
+        className="p-2 m-2 border border-gray-300 rounded-lg"
+        minWidth="13rem"
+      >
         <div className="flex justify-between mb-2 ">
-          <p className="text-sm font-bold underline w32 line-clamp-1">
+          <p className="w-32 text-sm font-bold underline line-clamp-1">
             {list.title}
           </p>
         </div>
@@ -68,7 +76,7 @@ const BoardList: FC<BoardListProps> = ({
             />
           </div>
         </div>
-        <div className="flex flex-col p-2 ">{children}</div>
+        <CardDroppable droppableId={list.uuid}>{children}</CardDroppable>
       </Div>
     </ListDraggable>
   )
