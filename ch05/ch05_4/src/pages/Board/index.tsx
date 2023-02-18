@@ -3,22 +3,19 @@
 // 459p Board에 BoardList 반영하기
 // 462p useLists 훅으로 간결해진 Board 컴포넌트
 // 482p 드래그 앤 드롭으로 목록 옮기기 추가
-import { useMemo, useRef } from 'react'
-import { useDrop } from 'react-dnd'
+// 485p ListDroppable 적용하기
+// 487p DragDropContext 추가하기
+import { useMemo } from 'react'
 import { Title } from '../../components'
 import CreateListForm from './CreateListForm'
 import BoardList from '../BoardList'
+import { ListDroppable } from '../../components'
 
 import { useLists } from '../../store/useLists'
 
 export default function Board() {
-  const divRef = useRef<HTMLDivElement>(null)
-  const [, drop] = useDrop({
-    accept: 'list',
-  })
-  drop(divRef)
-
-  const { lists, onRemoveList, onCreateList, onMoveList } = useLists()
+  const { lists, onRemoveList, onCreateList, onMoveList, onDragEnd } =
+    useLists()
 
   const children = useMemo(
     () =>
@@ -36,10 +33,14 @@ export default function Board() {
   return (
     <section className="mt-4">
       <Title>Board</Title>
-      <div className="flex flex-wrap p-2 mt-4 ">
-        {children}
-        <CreateListForm onCreateList={onCreateList} />
-      </div>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <ListDroppable className="flex flex-wrap p-2 mt-4">
+          <div className="flex flex-wrap p-2 mt-4 ">
+            {children}
+            <CreateListForm onCreateList={onCreateList} />
+          </div>
+        </ListDroppable>
+      </DragDropContext>
     </section>
   )
 }
