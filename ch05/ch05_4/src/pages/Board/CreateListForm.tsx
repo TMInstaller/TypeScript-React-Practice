@@ -1,7 +1,7 @@
 // 447p 목록 생성하기
 import type { FC, ChangeEvent } from 'react'
 import { useState, useCallback } from 'react'
-import { Icon } from '../../components'
+import { Icon } from '../../theme/daisyui'
 import * as D from '../../data'
 
 export type CreateListFormProps = {
