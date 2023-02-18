@@ -1,5 +1,14 @@
-// 392p 타입 파일 작성하기
+// 454p 타입 선언하기
 import type { Action } from 'redux'
+import type { List } from '../commonTypes'
+export * from '../commonTypes'
 
-export type State = any
-export type Actions = Action
+export type State = Record<string, List>
+
+export type AddListAction = Action<'@listEntities/add'> & {
+  payload: List
+}
+export type RemoveListAction = Action<'@listEntities/remove'> & {
+  payload: string
+}
+export type Actions = AddListAction | RemoveListAction
