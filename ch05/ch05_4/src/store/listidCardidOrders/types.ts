@@ -1,5 +1,33 @@
-// 392p 타입 파일 작성하기
+// 466p 타입 선언하기
 import type { Action } from 'redux'
+import * as CT from '../commonTypes'
+export * from '../commonTypes'
 
-export type State = any
-export type Actions = Action
+export type State = Record<CT.UUID, CT.UUID[]>
+
+export type SetListidCardIds = Action<'@listidCardids/set'> & {
+  payload: CT.ListidCardidS
+}
+export type RemoveListidAction = Action<'@listidCardids/remove'> & {
+  payload: CT.UUID
+}
+
+export type PrependCardidToListidAction =
+  Action<'@listidCardids/prependCardid'> & {
+    payload: CT.ListidCardid
+  }
+export type AppendCardidToListidAction =
+  Action<'@listidCardids/appendCardid'> & {
+    payload: CT.ListidCardid
+  }
+export type RemoveCardidToListidAction =
+  Action<'@listidCardids/removeCardid'> & {
+    payload: CT.ListidCardid
+  }
+
+export type Actions =
+  | SetListidCardIds
+  | RemoveListidAction
+  | PrependCardidToListidAction
+  | AppendCardidToListidAction
+  | RemoveCardidToListidAction
