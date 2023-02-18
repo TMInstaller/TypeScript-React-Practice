@@ -14,3 +14,5 @@ export * from './ListDraggable'
 export * from './ListDroppable'
 // 489p 인덱스에 추가하기
 export * from './CardDraggable'
+// 492p 인덱스에 추가하기
+export * from './CardDroppable'
