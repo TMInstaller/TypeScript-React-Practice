@@ -11,5 +11,4 @@ export type AddCardAction = Action<'@cardEntities/add'> & {
 export type RemoveCardAction = Action<'@cardEntities/remove'> & {
   payload: UUID
 }
-
 export type Actions = AddCardAction | RemoveCardAction
