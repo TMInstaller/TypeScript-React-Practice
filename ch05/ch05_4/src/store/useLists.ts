@@ -1,5 +1,6 @@
 // 461p useLists 커스텀 훅 만들기(초기 모습)
 // 470p useLists 훅에 반영하기
+// 481p useLists 훅 수정하기(onMoveList 추가)
 import { useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import type { AppState } from '../store'
@@ -19,6 +20,11 @@ export const useLists = () => {
   const listidCardidOrders = useSelector<AppState, LC.State>(
     ({ listidCardidOrders }) => listidCardidOrders
   )
+
+  const listidOrders = useSelector<AppState, LO.State>(
+    ({ listidOrders }) => listidOrders
+  )
+
   const onCreateList = useCallback(
     (uuid: string, title: string) => () => {
       const list = { uuid, title }
@@ -40,5 +46,19 @@ export const useLists = () => {
     },
     [dispatch, listidCardidOrders]
   )
-  return { lists, onCreateList, onRemoveList }
+  const onMoveList = useCallback(
+    (dragIndex: number, hoverIndex: number) => {
+      const newOrders = listidOrders.map((item, index) =>
+        index === dragIndex
+          ? listidOrders[hoverIndex]
+          : index === hoverIndex
+          ? listidOrders[dragIndex]
+          : item
+      )
+      dispatch(LO.setListidOrders(newOrders))
+    },
+    [dispatch, listidOrders]
+  )
+
+  return { lists, onCreateList, onRemoveList, onMoveList }
 }
