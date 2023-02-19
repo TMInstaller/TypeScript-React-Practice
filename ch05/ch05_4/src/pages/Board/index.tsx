@@ -6,6 +6,7 @@
 // 485p ListDroppable 적용하기
 // 487p DragDropContext 추가하기
 import { useMemo } from 'react'
+import { DragDropContext } from 'react-beautiful-dnd'
 import { Title } from '../../components'
 import CreateListForm from './CreateListForm'
 import BoardList from '../BoardList'
