@@ -1,9 +1,9 @@
 // 467p 액션 생성기 작성하기
 import type * as T from './types'
 
-export const setListidCardIds = (
+export const setListidCardids = (
   payload: T.ListidCardidS
-): T.SetListidCardIds => ({
+): T.SetListidCardids => ({
   type: '@listidCardids/set',
   payload,
 })

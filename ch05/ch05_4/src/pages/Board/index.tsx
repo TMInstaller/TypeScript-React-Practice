@@ -31,12 +31,13 @@ export default function Board() {
       )),
     [lists, onRemoveList, onMoveList]
   )
+
   return (
     <section className="mt-4">
       <Title>Board</Title>
       <DragDropContext onDragEnd={onDragEnd}>
-        <ListDroppable className="flex flex-wrap p-2 mt-4">
-          <div className="flex flex-wrap p-2 mt-4 ">
+        <ListDroppable className="flex flex-row p-2 mt-4">
+          <div className="flex flex-wrap p-2 mt-4">
             {children}
             <CreateListForm onCreateList={onCreateList} />
           </div>

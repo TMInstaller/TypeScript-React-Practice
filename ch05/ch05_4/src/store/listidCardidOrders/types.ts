@@ -5,7 +5,7 @@ export * from '../commonTypes'
 
 export type State = Record<CT.UUID, CT.UUID[]>
 
-export type SetListidCardIds = Action<'@listidCardids/set'> & {
+export type SetListidCardids = Action<'@listidCardids/set'> & {
   payload: CT.ListidCardidS
 }
 export type RemoveListidAction = Action<'@listidCardids/remove'> & {
@@ -26,7 +26,7 @@ export type RemoveCardidToListidAction =
   }
 
 export type Actions =
-  | SetListidCardIds
+  | SetListidCardids
   | RemoveListidAction
   | PrependCardidToListidAction
   | AppendCardidToListidAction

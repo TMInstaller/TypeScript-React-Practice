@@ -52,21 +52,21 @@ const BoardList: FC<BoardListProps> = ({
         className="p-2 m-2 border border-gray-300 rounded-lg"
         minWidth="13rem"
       >
-        <div className="flex justify-between mb-2 ">
+        <div className="flex justify-between mb-2">
           <p className="w-32 text-sm font-bold underline line-clamp-1">
             {list.title}
           </p>
         </div>
-        <div className="flex justify-between ml-2 ">
+        <div className="flex justify-between ml-2">
           <Icon
             name="remove"
             className="btn-error btn-xs"
             onClick={onRemoveList}
           />
-          <div className="flex ">
+          <div className="flex">
             <Icon
               name="post_add"
-              className=" btn-success btn-xs"
+              className="btn-success btn-xs"
               onClick={onPrependCard}
             />
             <Icon
@@ -81,5 +81,4 @@ const BoardList: FC<BoardListProps> = ({
     </ListDraggable>
   )
 }
-
 export default BoardList

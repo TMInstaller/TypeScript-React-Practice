@@ -6,8 +6,8 @@ import type { DropResult } from 'react-beautiful-dnd'
 import { useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import type { AppState } from '../store'
-import type { List } from './commonTypes'
-import * as LO from './listidOrders'
+import type { List } from '../store/commonTypes'
+import * as LO from '../store/listidOrders'
 import * as L from '../store/listEntities'
 import * as C from '../store/cardEntities'
 import * as LC from '../store/listidCardidOrders'
@@ -23,17 +23,16 @@ export const useLists = () => {
   const listidCardidOrders = useSelector<AppState, LC.State>(
     ({ listidCardidOrders }) => listidCardidOrders
   )
-
   const listidOrders = useSelector<AppState, LO.State>(
     ({ listidOrders }) => listidOrders
   )
 
   const onCreateList = useCallback(
-    (uuid: string, title: string) => () => {
+    (uuid: string, title: string) => {
       const list = { uuid, title }
       dispatch(LO.addListidToOrders(uuid))
       dispatch(L.addList(list))
-      dispatch(LC.setListidCardIds({ listid: list.uuid, cardids: [] }))
+      dispatch(LC.setListidCardids({ listid: list.uuid, cardids: [] }))
     },
     [dispatch]
   )
@@ -77,7 +76,7 @@ export const useLists = () => {
         const cardidOrders = listidCardidOrders[destinationListid]
 
         dispatch(
-          LC.setListidCardIds({
+          LC.setListidCardids({
             listid: destinationListid,
             cardids: U.swapItemsInArray(
               cardidOrders,
@@ -89,7 +88,7 @@ export const useLists = () => {
       } else {
         const sourceCardidOrders = listidCardidOrders[sourceListid]
         dispatch(
-          LC.setListidCardIds({
+          LC.setListidCardids({
             listid: sourceListid,
             cardids: U.removeItemAtIndexInArray(
               sourceCardidOrders,
@@ -99,7 +98,7 @@ export const useLists = () => {
         )
         const destinationCardidOrders = listidCardidOrders[destinationListid]
         dispatch(
-          LC.setListidCardIds({
+          LC.setListidCardids({
             listid: destinationListid,
             cardids: U.insertItemAtIndexInArray(
               destinationCardidOrders,
@@ -112,6 +111,5 @@ export const useLists = () => {
     },
     [listidCardidOrders, dispatch]
   )
-
   return { lists, onCreateList, onRemoveList, onMoveList, onDragEnd }
 }
